@@ -5,7 +5,7 @@ export default (state, action) => {
       return {
         ...state,
         loading: false,
-        transaction: action.payload,
+        transactions: action.payload,
       };
     case "DELETE_TRANSACTION":
       return {
@@ -19,8 +19,7 @@ export default (state, action) => {
         ...state,
         transactions: [...state.transactions, action.payload],
       };
-
-    case "TRANSACTIOB_ERROR":
+    case "TRANSACTION_ERROR":
       return {
         ...state,
         error: action.payload,
