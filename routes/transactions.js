@@ -4,7 +4,7 @@ const {
   getTransactions,
   addTransactions,
   deleteTransactions,
-} = require("../controlers/transactionControler");
+} = require("../controller/transactionControler");
 router.route("/").get(getTransactions).post(addTransactions);
 
 router.route("/:id").delete(deleteTransactions);
